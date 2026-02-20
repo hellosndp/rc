@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Review Page</title>
+    <title>Rating Card - Stethbook</title>
+    
+    
+        <!-- ✅ Favicon -->
+        <link rel="icon" href="http://stethbook.com/wp-content/uploads/2025/07/cropped-Fevicon-3.png" type="image/x-icon" />
+        <!-- ✅ Social Card Meta Tags -->
+
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -213,6 +219,97 @@
                 throw error;
             }
         }
+        
+        function generateShareImage({ name, location, rating }) {
+              const canvas = document.createElement('canvas');
+              canvas.width = 1080;
+              canvas.height = 1080;
+            
+              const ctx = canvas.getContext('2d');
+            
+              // Background
+              ctx.fillStyle = '#38BFC3';
+              ctx.fillRect(0, 0, 1080, 1080);
+            
+              ctx.textBaseline = 'top';
+            
+              // ⭐ Stars ONLY for 5-star
+              if (rating === 5) {
+                ctx.fillStyle = '#FFD700';
+                ctx.font = 'bold 80px Onest';
+                ctx.fillText('★★★★★', 80, 140);
+              }
+            
+              // Main headline
+              ctx.fillStyle = '#FFFFFF';
+              ctx.font = 'bold 96px Onest';
+            
+              const headline =
+                rating === 5 ? '5-STAR TREATMENT' : 'GOOD TREATMENT';
+            
+              ctx.fillText(headline, 80, rating === 5 ? 300 : 260);
+            
+              // Subtext
+              ctx.font = 'bold 72px Onest';
+              const subText =
+                rating === 5 ? 'I LOVED IT ❤️' : 'Satisfied with my visit';
+            
+              ctx.fillText(subText, 80, rating === 5 ? 420 : 380);
+            
+              // Business name
+              ctx.font = 'bold 56px Onest';
+              ctx.fillText(name, 80, 620);
+            
+              // Location
+              ctx.font = '48px Onest';
+              ctx.globalAlpha = 0.9;
+              ctx.fillText(location, 80, 700);
+            
+              // Footer
+              ctx.globalAlpha = 0.6;
+              ctx.font = '32px Onest';
+              ctx.fillText('Shared via StethBook', 80, 980);
+            
+              return canvas.toDataURL('image/png');
+            }
+            
+        async function handleShareStatus(business, rating) {
+              const imageData = generateShareImage({
+                name: business.business_name,
+                location: business.location || '',
+                rating
+              });
+            
+              const blob = await (await fetch(imageData)).blob();
+              const file = new File([blob], 'stethbook-review.png', {
+                type: 'image/png'
+              });
+            
+              // Native mobile share (WhatsApp picker opens automatically)
+              if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                await navigator.share({
+                  files: [file],
+                  title: 'My Experience',
+                  text:
+                    rating === 5
+                      ? '5-star treatment. I loved it!'
+                      : 'Good treatment. Satisfied with my visit.'
+                });
+              } else {
+                // Fallback: download image
+                const link = document.createElement('a');
+                link.href = imageData;
+                link.download = 'stethbook-review.png';
+                link.click();
+            
+                alert('Your WhatsApp status image is ready 😊');
+              }
+            }
+    
+
+
+
+
 
         async function fetchReviews(businessId) {
             try {
@@ -1087,6 +1184,19 @@
                                         <br />
                                         It helps us grow.
                                     </p>
+                                {rating >= 4 && (
+                                  <button
+                                    onClick={() => handleShareStatus(business, rating)}
+                                    className="mt-6 px-6 py-3 bg-[#3B9B7A] text-white rounded-full font-medium shadow-lg shadow-[#3B9B7A]/30"
+                                  >
+                                    Share and Support Clinic
+                                  </button>
+                                )}
+
+                            
+                            
+
+
                                 </motion.div>
                             )}
                         </AnimatePresence>
