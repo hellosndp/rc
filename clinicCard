@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Dr. Sneha Goud Kuna – WebCard</title>
+        <!-- ✅ Favicon -->
+        <link rel="icon" href="http://stethbook.com/wp-content/uploads/2025/07/cropped-Fevicon-3.png" type="image/x-icon" />
+        <!-- ✅ Social Card Meta Tags -->
+        <meta property="og:title" content="Dr. Sneha Goud Kuna – Dental Surgeon" />
+        <meta property="og:description" content="25+ years of experience. Consult now at Happy Dental Hospital" />
+        <meta property="og:image" content="http://stethbook.com/wp-content/uploads/2025/10/DrSnehaGoudKuna-dp.png?text=DrSnehaGoudKuna" />
+        <meta property="og:url" content="https://stethbook.com/DrSnehaGoudKuna" />
+        <meta property="og:type" content="website" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Dr. Sneha Goud Kuna – Dental Surgeon" />
+        <meta name="twitter:description" content="25+years of experience. Consult now at Happy Dental Hospital" />
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-3PL7CPWW6L"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag("js", new Date());
+            gtag("config", "G-3PL7CPWW6L");
+        </script>
+        <!-- ✅ Popup animation (only added styles) -->
+        <style>
+            @keyframes slideDown {
+                0% {
+                    transform: translateY(-30px);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            }
+            .animate-slideDown {
+                animation: slideDown 0.4s ease-out;
+            }
+            .section-title {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #6b7280;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+.tab-btn {
+    transition: all 0.2s ease;
+}
+
+
+        </style>
+    </head>
+    <body class="min-h-screen flex flex-col bg-gradient-to-br from-purple-200 via-blue-100 to-green-100 text-gray-800" style="font-family: Arial, sans-serif;">
+        <!-- ✅ Rating Pop-up (added) -->
+        <div id="ratingPopup" class="fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50 hidden">
+            <div class="bg-white rounded-2xl shadow-2xl w-11/12 max-w-sm p-6 text-center animate-slideDown">
+                <!-- Encouraging image -->
+                <img src="http://stethbook.com/wp-content/uploads/2025/09/rating_emoji.gif" alt="Positive Review" class="w-24 mx-auto mb-3" />
+                <h3 class="text-lg font-semibold text-gray-800 mb-3">Rate your experience with us..</h3>
+                <!-- Stars -->
+                <div id="stars" class="flex justify-center space-x-2 mb-4">
+                    <span class="text-5xl text-gray-300 cursor-pointer hover:text-yellow-400 transition" data-value="1">★</span> <span class="text-5xl text-gray-300 cursor-pointer hover:text-yellow-400 transition" data-value="2">★</span>
+                    <span class="text-5xl text-gray-300 cursor-pointer hover:text-yellow-400 transition" data-value="3">★</span> <span class="text-5xl text-gray-300 cursor-pointer hover:text-yellow-400 transition" data-value="4">★</span>
+                    <span class="text-5xl text-gray-300 cursor-pointer hover:text-yellow-400 transition" data-value="5">★</span>
+                </div>
+                <p id="closeBtn" class="mt-3 text-sm text-gray-500 cursor-pointer hover:underline">Close</p>
+            </div>
+        </div>
+        <main class="px-4 sm:px-6 md:px-0 flex-grow mt-6">
+            <div class="w-full max-w-md mx-auto bg-white shadow-xl rounded-3xl overflow-hidden">
+                <div class="p-6">
+                    <!-- Profile Top -->
+                    <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <img id="doctorImage" src="http://stethbook.com/wp-content/uploads/2025/10/DrSnehaGoudKuna-dp.png" alt="Dr. Sneha Goud Kuna" class="w-32 aspect-square object-cover rounded-full border-4 border-white shadow-xl" />
+                        </div>
+                        <div>
+                            <div id="availabilityStatus" class="text-xs px-2 py-1 rounded-full font-semibold inline-block mb-1"></div>
+                            <h2 class="text-xl font-semibold">Dr. Sneha Goud Kuna</h2>
+                            <p class="text-sm text-gray-500">BDS</p>
+                            <p class="text-sm text-purple-700 font-medium bg-purple-50 px-2 py-0.5 rounded-md inline-block w-fit">Dental Surgeon</p>
+                        </div>
+                    </div>
+                    <!-- Badges Section -->
+                    <br />
+                    <div class="grid grid-cols-3 text-center mt-6">
+                        <!-- Experience Badge -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 flex items-center justify-center rounded-full bg-purple-200 text-purple-700 text-2xl shadow-sm">
+                                <img src="https://img.icons8.com/?size=30&id=65218&format=png&color=000000" alt="Experience" />
+                            </div>
+                            <span class="mt-2 text-sm font-medium text-gray-800 max-w-[80px] break-words"> <b text-gray-800>25+</b> Years of Experience </span>
+                        </div>
+                        <!-- Google Rating Badge with blue 'Rating' link -->
+                        <div class="flex flex-col items-center">
+                            <img src="https://img.icons8.com/?size=100&id=V5cGWnc9R4xj&format=png&color=000000" alt="Google Rating" class="w-14 h-14 object-contain" />
+                            <span class="mt-2 text-sm font-medium text-gray-800 max-w-[100px] text-center break-words">
+                                <a href="https://maps.app.goo.gl/oLhNLpFvjVhZ48V8A" target="_blank" class="text-sm font-medium text-gray-800 no-underline"> <b>5</b> (25) ⭐️ </a>
+                            </span>
+                        </div>
+                        <!-- Views Badge (dynamic) -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-16 h-16 flex items-center justify-center rounded-full bg-blue-200 text-blue-700 text-2xl shadow-sm"><img src="https://img.icons8.com/?size=40&id=95129&format=png&color=000000" alt="Rating" /></div>
+                            <span class="mt-2 text-sm font-medium text-gray-800 max-w-[80px] break-words"> <b id="visitCount">—</b> Profile Visitors </span>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+
+    <!-- Tabs -->
+<div class="relative">
+
+    <!-- Tabs -->
+    <div class="flex gap-6 text-sm font-medium">
+<button class="tab-btn px-1 py-2 text-blue-600 border-b-4 border-blue-500" onclick="switchTab('about', this)">
+            About Us
+        </button>
+
+        <button class="tab-btn px-1 py-2 text-gray-500 border-b-4 border-transparent" onclick="switchTab('services', this)">
+            Our Services
+        </button>
+
+        <button class="tab-btn px-1 py-2 text-gray-500 border-b-4 border-transparent" onclick="switchTab('gallery', this)">
+            Gallery
+        </button>
+    </div>
+
+    <!-- Grey Base Line -->
+    <div class="absolute bottom-0 left-0 w-full h-[1px] bg-gray-300 "></div>
+
+</div>
+
+    
+
+    <!-- Tab Content -->
+    <div class="mt-3 text-sm text-gray-600">
+
+        <!-- ABOUT -->
+        <div id="tab-about" class="tab-content">
+            <!-- Bio & Experience with More/Less -->
+                    <div class="mt-4 text-sm text-gray-600">
+                        <div id="bioText" class="transition-all duration-300"></div>
+                        <button id="toggleMore" onclick="toggleBio()" class="text-blue-600 hover:underline text-xs mt-1 hidden">More</button>
+                    </div>
+        </div>
+
+        <!-- SERVICES -->
+        <div id="tab-services" class="tab-content hidden">
+            <ul class="list-disc ml-5 space-y-1">
+                <li>Root Canal Treatment</li>
+                <li>Dental Implants</li>
+                <li>Teeth Whitening</li>
+                <li>Smile Designing</li>
+                <li>Braces & Aligners</li>
+            </ul>
+        </div>
+
+        <!-- GALLERY -->
+        <div id="tab-gallery" class="tab-content hidden grid grid-cols-3 gap-2">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Tm6uFTzVy6RQpD5lTJVOOd9q95GW8D5gkg&sZ" class="rounded-lg object-cover" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Tm6uFTzVy6RQpD5lTJVOOd9q95GW8D5gkg&s" class="rounded-lg object-cover" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-Tm6uFTzVy6RQpD5lTJVOOd9q95GW8D5gkg&s" class="rounded-lg object-cover" />
+        </div>
+
+    </div>
+</div>
+
+
+                    
+                    <!-- OUR DOCTORS SECTION -->
+<div class="section-title">OUR DOCTORS</div>
+
+<div class="flex gap-4 overflow-x-auto pb-2">
+    
+    <!-- Doctor Card 1 -->
+    <div class="min-w-[100px] text-center">
+        <img src="http://stethbook.com/wp-content/uploads/2025/10/DrSnehaGoudKuna-dp.png"
+             class="w-20 h-20 object-cover rounded-full mx-auto shadow-md border-2 border-white" />
+        <p class="text-sm font-medium mt-2">Dr. Sneha</p>
+        <p class="text-xs text-gray-500">25+ yrs</p>
+    </div>
+
+    <!-- Doctor Card 2 -->
+    <div class="min-w-[100px] text-center">
+        <img src="http://stethbook.com/wp-content/uploads/2025/10/DrSnehaGoudKuna-dp.png"
+             class="w-20 h-20 object-cover rounded-full mx-auto shadow-md border-2 border-white" />
+        <p class="text-sm font-medium mt-2">Dr. Ramesh</p>
+        <p class="text-xs text-gray-500">15 yrs</p>
+    </div>
+
+    <!-- Doctor Card 3 -->
+    <div class="min-w-[100px] text-center">
+        <img src="http://stethbook.com/wp-content/uploads/2025/10/DrSnehaGoudKuna-dp.png"
+             class="w-20 h-20 object-cover rounded-full mx-auto shadow-md border-2 border-white" />
+        <p class="text-sm font-medium mt-2">Dr. Priya</p>
+        <p class="text-xs text-gray-500">10 yrs</p>
+    </div>
+
+</div><!-- CLINIC INFO TABS -->
+
+
+
+                    <!-- Consult CTA -->
+                    <a
+                        href="https://wa.me/919032361903"
+                        target="_blank"
+                        class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white text-center font-medium py-2 px-4 rounded-lg w-full transition"
+                        onclick="gtag('event', 'consult_click', { doctor: 'DrSnehaGoudKuna' });"
+                    >
+                        Consult Now
+                    </a>
+                    <hr class="my-6 border-t" />
+                    <!-- Contact & Location -->
+                    <div class="space-y-4 text-sm">
+                        <a href="tel:9032361903" class="flex items-center text-blue-600 hover:underline" onclick="gtag('event', 'call_click', { doctor: 'DrSnehaGoudKuna' });">
+                            <img src="https://img.icons8.com/ios-filled/24/4caf50/phone.png" class="w-4 h-4 mr-2" alt="Phone Icon" /> <span class="ml-2">Call Doctor</span>
+                        </a>
+                        <a href="tel:9063606905" class="flex items-center text-blue-600 hover:underline" onclick="gtag('event', 'call_click', { doctor: 'DrSnehaGoudKuna' });">
+                            <img src="https://img.icons8.com/ios-filled/24/4caf50/phone.png" class="w-4 h-4 mr-2" alt="Phone Icon" /> <span class="ml-2">Call Clinic</span>
+                        </a>
+                        
+                        <a href="mailto:MailId" class="flex items-center text-blue-600 hover:underline" onclick="gtag('event', 'email_click', { doctor: 'DrSnehaGoudKuna' });">
+                            <img src="https://img.icons8.com/ios-filled/24/2196f3/email.png" class="w-4 h-4 mr-2" alt="Email Icon" /> <span class="ml-2">Mail Me</span>
+                        </a>
+                        <a href="https://share.google/KBSHe5obYgkXMczPT" target="_blank" class="flex items-center text-blue-600 hover:underline" onclick="gtag('event', 'location_click', { doctor: 'DrSnehaGoudKuna' });">
+                            <img src="https://img.icons8.com/ios-filled/24/f44336/marker.png" class="w-4 h-4 mr-2" alt="Location Icon" /> <span class="ml-2">Happy Dental Hospital, Begumpet</span>
+                        </a>
+                        <button onclick="gtag('event', 'schedule_click', { doctor: 'DrSnehaGoudKuna' });toggleSchedule()" class="flex items-center text-blue-600 hover:underline">
+                            <img src="https://img.icons8.com/ios-filled/24/ff9800/calendar--v1.png" class="w-4 h-4 mr-2" alt="Schedule Icon" /> <span class="ml-2">View Weekly Timings</span>
+                        </button>
+                        <ul id="schedule" class="list-disc list-inside ml-4 hidden mt-2 text-sm text-gray-600">
+                            <li><strong>Mon</strong> : 09:00 AM - 2:00 PM, 4:00 PM - 8:00 PM</li>
+                            <li><strong>Tue</strong> : 09:00 AM - 2:00 PM, 4:00 PM - 8:00 PM</li>
+                            <li><strong>Wed</strong> : 09:00 AM - 2:00 PM, 4:00 PM - 8:00 PM</li>
+                            <li><strong>Thu</strong> : 09:00 AM - 2:00 PM, 4:00 PM - 8:00 PM</li>
+                            <li><strong>Fri</strong> : 09:00 AM - 2:00 PM, 4:00 PM - 8:00 PM</li>
+                            <li><strong>Sat</strong> : 09:00 AM - 2:00 PM, 4:00 PM - 8:00 PM</li>
+                            <li><strong>Sun</strong> : 10:00 AM - 1:00 PM</li>
+                        </ul>
+                        <button onclick="toggleQRCode()" class="flex items-center text-blue-600 hover:underline mt-2">
+                            <img src="https://img.icons8.com/ios-filled/24/000000/qr-code.png" class="w-4 h-4 mr-2" alt="QR Icon" /> <span class="ml-2">View QR Code</span>
+                        </button>
+                        <div id="qrCodeContainer" class="hidden mt-3 flex justify-center"><img src="http://stethbook.com/wp-content/uploads/2025/10/DrSnehaGoudKunaQr.png" alt="QR Code" class="w-40 h-40 border rounded-lg shadow-md" /></div>
+                        <button onclick="downloadVCF()" class="flex items-center text-blue-600 hover:underline mt-2">
+                            <img src="https://img.icons8.com/ios-filled/24/000000/save-as.png" class="w-4 h-4 mr-2" alt="Save Contact Icon" /> <span class="ml-2">Save this Contact in Phone</span>
+                        </button>
+                    </div>
+                    <br />
+                    <div class="flex justify-center gap-4 my-4">
+                        <!-- Practo -->
+                        <a href="" onclick="gtag('event', 'practo_click', { doctor: 'DrSnehaGoudKuna' });" target="_blank" aria-label="Practo">
+                            <img src="https://play-lh.googleusercontent.com/stRFjUq40fX2uVc9DtopYJNojdPRJWYKkrIoGM69rOzS83l8fU6DpqTUVwc5cFY3ruEy" alt="Practo" class="w-8 h-8 rounded-full shadow-md hover:scale-110 transition" />
+                        </a>
+                        <!-- YouTube -->
+                        <a href="" onclick="gtag('event', 'youtube_click', { doctor: 'DrSnehaGoudKuna' });" target="_blank" aria-label="YouTube">
+                            <img
+                                src="https://img.freepik.com/premium-vector/vector-circle-youtube-logo-collection-with-flat-design_534308-21669.jpg?semt=ais_hybrid&w=740"
+                                alt="YouTube"
+                                class="w-8 h-8 rounded-full shadow-md hover:scale-110 transition"
+                            />
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/dr.snehagoud.kuna/" onclick="gtag('event', 'instagram_click', { doctor: 'DrSnehaGoudKuna' });" target="_blank" aria-label="Instagram">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Instagram_logo_2016.svg/1024px-Instagram_logo_2016.svg.png" alt="Instagram" class="w-8 h-8 rounded-full shadow-md hover:scale-110 transition" />
+                        </a>
+                        <!-- Website -->
+                        <a href="" target="_blank" onclick="gtag('event', 'website_click', { doctor: 'DrSnehaGoudKuna' });" aria-label="Website">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxMwLg_2nefcPJoZcQoyTGYT0ILDsa9nlEGQ&s" alt="Website" class="w-8 h-8 rounded-full shadow-md hover:scale-110 transition" />
+                        </a>
+                    </div>
+                </div>
+                <button
+                    class="mt-6 w-full flex items-center justify-center gap-2 text-sm font-medium text-blue-600 hover:underline rounded-b-lg py-2 transition"
+                    onclick="gtag('event', 'share_click', { doctor: 'DrSnehaGoudKuna' }); shareCard();"
+                >
+                    Share the Card
+                </button>
+            </div>
+        </main>
+        <footer class="mt-auto text-center text-sm text-gray-500 mb-4">
+            Powered by <a href="https://StethBook.com" target="_blank" class="text-blue-600 font-medium hover:underline" onclick="gtag('event', 'stethbook_click', { doctor: 'DrSnehaGoudKuna' });">StethBook 1.0.3</a>
+        </footer>
+        <script type="module" src="/cards/counter.js"></script>
+        <script>
+            function toggleSchedule() {
+                document.getElementById("schedule").classList.toggle("hidden");
+            }
+            function parseTime(t) {
+                let parts = t.split(" ");
+                let timeStr = parts[0];
+                let modifier = parts[1];
+                let hours, minutes;
+                if (timeStr.includes(":")) {
+                    [hours, minutes] = timeStr.split(":").map(Number);
+                } else {
+                    hours = Number(timeStr);
+                    minutes = 0;
+                }
+                if (modifier && modifier.toUpperCase() === "PM" && hours < 12) {
+                    hours += 12;
+                }
+                if (modifier && modifier.toUpperCase() === "AM" && hours === 12) {
+                    hours = 0;
+                }
+                return hours * 60 + minutes;
+            }
+            function isWithinTimeRanges(timeRanges) {
+                const now = new Date();
+                const currentMinutes = now.getHours() * 60 + now.getMinutes();
+                for (let range of timeRanges) {
+                    const [startStr, endStr] = range.split("–").map((t) => t.trim());
+                    const startMinutes = parseTime(startStr);
+                    const endMinutes = parseTime(endStr);
+                    if (startMinutes <= endMinutes) {
+                        if (currentMinutes >= startMinutes && currentMinutes <= endMinutes) {
+                            return true;
+                        }
+                    } else {
+                        if (currentMinutes >= startMinutes || currentMinutes <= endMinutes) {
+                            return true;
+                        }
+                    }
+                }
+                return false;
+            }
+            const weeklySchedule = { Mon: ["9 AM – 2 PM","4 PM – 8 PM"], Tue: ["9 AM – 2 PM","4 PM – 8 PM"], Wed: ["9 AM – 2 PM","4 PM – 8 PM"], Thu: ["9 AM – 2 PM","4 PM – 8 PM"], Fri: ["9 AM – 2 PM","4 PM – 8 PM"], Sat: ["9 AM – 2 PM","4 PM – 8 PM"], Sun: ["10 AM – 1 PM"] };
+            function updateAvailabilityStatus() {
+                const now = new Date();
+                const days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+                const currentDay = days[now.getDay()];
+                const statusDiv = document.getElementById("availabilityStatus");
+                let isAvailable = false;
+                if (weeklySchedule[currentDay] && weeklySchedule[currentDay].length > 0) {
+                    isAvailable = isWithinTimeRanges(weeklySchedule[currentDay]);
+                }
+                if (isAvailable) {
+                    statusDiv.textContent = "Available Now";
+                    statusDiv.className = "text-xs px-2 py-1 rounded-full font-semibold inline-block mb-1 bg-green-100 text-green-600";
+                } else {
+                    statusDiv.textContent = "Not Available";
+                    statusDiv.className = "text-xs px-2 py-1 rounded-full font-semibold inline-block mb-1 bg-gray-200 text-gray-500";
+                }
+            }
+            const fullBioText = `Dr. Sneha Goud Kuna is a compassionate and highly regarded dentist at Happy Dental Hospital, known for her professionalism, skill, and patient-centered approach. Her patients consistently describe her as one of the best doctors in the city, appreciated for her kindness, availability, and genuine care. Many mention that she takes the time to explain every procedure clearly, ensuring comfort and trust throughout the treatment.Over the years, she has built lasting relationships with her patients—some even traveling long distances for follow-ups, reflecting the confidence they have in her expertise. Her work in cosmetic smile design, restorative treatments, and preventive care has earned particular praise for precision and aesthetic results.Reviews often highlight her gentle approach, friendliness, and the positive atmosphere maintained by her team. At Happy Dental Hospital, Dr. Sneha combines modern dental techniques with a personal touch, making every patient feel valued and well cared for from start to finish.`;
+            let isBioExpanded = false;
+            const wordLimit = 40;
+            function initializeBio() {
+                const words = fullBioText.split(/\s+/);
+                const bioDiv = document.getElementById("bioText");
+                const toggleBtn = document.getElementById("toggleMore");
+                if (words.length <= wordLimit) {
+                    bioDiv.innerHTML = fullBioText;
+                    toggleBtn.style.display = "none";
+                } else {
+                    const limitedText = words.slice(0, wordLimit).join(" ") + "...";
+                    bioDiv.innerHTML = limitedText;
+                    toggleBtn.style.display = "inline";
+                }
+            }
+            function toggleBio() {
+                const bioDiv = document.getElementById("bioText");
+                const toggleBtn = document.getElementById("toggleMore");
+                if (isBioExpanded) {
+                    const words = fullBioText.split(/\s+/);
+                    const limitedText = words.slice(0, wordLimit).join(" ") + "...";
+                    bioDiv.innerHTML = limitedText;
+                    toggleBtn.textContent = "More";
+                    gtag("event", "bio_toggle", { doctor: "DrSnehaGoudKuna", state: "less" });
+                } else {
+                    bioDiv.innerHTML = fullBioText;
+                    toggleBtn.textContent = "Less";
+                    gtag("event", "bio_toggle", { doctor: "DrSnehaGoudKuna", state: "more" });
+                }
+                isBioExpanded = !isBioExpanded;
+            }
+            updateAvailabilityStatus();
+            initializeBio();
+            function shareCard() {
+                const cardLink = "https://stethbook.com/DrSnehaGoudKuna";
+                const message = `Check out Dr. Sneha’s WebCard: ${cardLink}`;
+                navigator.clipboard
+                    .writeText(cardLink)
+                    .then(() => {
+                        console.log("Link copied to clipboard");
+                    })
+                    .catch((err) => {
+                        console.error("Failed to copy text: ", err);
+                        alert("Please copy the link manually: " + cardLink);
+                    });
+                const whatsappURL = `https://wa.me/?text=${encodeURIComponent(message)}`;
+                window.open(whatsappURL, "_blank");
+            }
+            function toggleQRCode() {
+                document.getElementById("qrCodeContainer").classList.toggle("hidden");
+                gtag("event", "qr_toggle", { doctor: "DrSnehaGoudKuna", state: document.getElementById("qrCodeContainer").classList.contains("hidden") ? "less" : "more" });
+            }
+            function downloadVCF() {
+                const vcfData = [
+                    "BEGIN:VCARD",
+                    "VERSION:3.0",
+                    "FN:Dr. Sneha Goud Kuna",
+                    "N:Goud Kuna;Sneha;;;",
+                    "ORG:Happy Dental Hospital",
+                    "TITLE:Dental Surgeon",
+                    "TEL;TYPE=CELL:+919032361903",
+                    "EMAIL:MailId",
+                    "URL:https://stethbook.com/DrSnehaGoudKuna",
+                    "END:VCARD",
+                ].join("\n");
+                const blob = new Blob([vcfData], { type: "text/vcard" });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement("a");
+                a.href = url;
+                a.download = "DrSnehaGoudKuna.vcf";
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                URL.revokeObjectURL(url);
+                gtag("event", "contact_download", { doctor: "DrSnehaGoudKuna" });
+            }
+        </script>
+        <!-- ✅ Rating Popup Script with GA4 Events -->
+        <script>
+            (function () {
+                if (window.__ratingPopupInit) return;
+                window.__ratingPopupInit = true;
+                function showPopupAfterDelay() {
+                    const popup = document.getElementById("ratingPopup");
+                    if (!popup) return;
+                    setTimeout(() => {
+                        popup.classList.remove("hidden");
+                        if (typeof gtag === "function") {
+                            gtag("event", "popup_shown", { event_category: "Rating Popup", event_label: "Popup Displayed" });
+                        }
+                        const starsContainer = popup.querySelector("#stars");
+                        const stars = starsContainer ? starsContainer.querySelectorAll("span[data-value]") : [];
+                        const closeBtn = popup.querySelector("#closeBtn");
+                        stars.forEach((s) => {
+                            s.addEventListener("mouseover", () => {
+                                const v = Number(s.getAttribute("data-value"));
+                                stars.forEach((x) => {
+                                    const xv = Number(x.getAttribute("data-value"));
+                                    if (xv <= v) {
+                                        x.classList.add("text-yellow-400");
+                                        x.classList.remove("text-gray-300");
+                                    } else {
+                                        x.classList.remove("text-yellow-400");
+                                        x.classList.add("text-gray-300");
+                                    }
+                                });
+                            });
+                        });
+                        stars.forEach((s) => {
+                            s.addEventListener("click", () => {
+                                const rating = Number(s.getAttribute("data-value"));
+                                if (typeof gtag === "function") {
+                                    gtag("event", "rating_star_" + rating, {});
+                                }
+                                const googleReviewUrl = "https://g.page/r/CdYiqUcDFzDHEBM/review";
+                                const feedbackFormUrl = "https://forms.gle/T7wZdgxMuAqUS3vEA";
+                                if (rating <= 4) {
+                                    window.open(feedbackFormUrl, "_blank");
+                                } else {
+                                    window.open(googleReviewUrl, "_blank");
+                                }
+                            });
+                        });
+                        if (closeBtn) {
+                            closeBtn.addEventListener("click", () => {
+                                popup.classList.add("hidden");
+                                if (typeof gtag === "function") {
+                                    gtag("event", "rating_closed", { event_category: "Rating Popup", event_label: "Close Button" });
+                                }
+                            });
+                        }
+                    }, 2000);
+                }
+                if (document.readyState === "loading") {
+                    document.addEventListener("DOMContentLoaded", showPopupAfterDelay);
+                } else {
+                    showPopupAfterDelay();
+                }
+            })();
+            
+            
+        </script>
+        <script>
+function switchTab(tab, el) {
+    // Hide all content
+    document.querySelectorAll(".tab-content").forEach(c => c.classList.add("hidden"));
+
+    // Show selected
+    document.getElementById("tab-" + tab).classList.remove("hidden");
+
+    // Reset tabs
+    document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.classList.remove("border-blue-500", "text-blue-600", "border-b-4");
+        btn.classList.add("text-gray-500", "border-transparent", "border-b-4");
+    });
+
+    // Activate clicked tab
+el.classList.add("border-blue-500", "text-blue-600");
+el.classList.remove("text-gray-500", "border-transparent");
+
+}
+</script>
+
+
+
+    </body>
+</html>
