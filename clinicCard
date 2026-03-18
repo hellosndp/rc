@@ -53,6 +53,17 @@
 .tab-btn {
     transition: all 0.2s ease;
 }
+@keyframes slideUp {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+.animate-slideUp {
+    animation: slideUp 0.3s ease-out;
+}
 
 
         </style>
@@ -190,15 +201,21 @@
     <!-- Doctor Card 1 -->
     <div class="min-w-[100px] text-center">
         <img src="http://stethbook.com/wp-content/uploads/2025/10/DrSnehaGoudKuna-dp.png"
-             class="w-20 h-20 object-cover rounded-full mx-auto shadow-md border-2 border-white" />
+     onclick="openDoctorSheet('Dr. Sneha', '25+ yrs', 'Experienced dental surgeon specializing in cosmetic and restorative treatments.', this.src)"
+     class="cursor-pointer w-20 h-20 object-cover rounded-full mx-auto shadow-md border-2 border-white" />
         <p class="text-sm font-medium mt-2">Dr. Sneha</p>
-        <p class="text-xs text-gray-500">25+ yrs</p>
-    </div>
+        <p id="sheetExpTop" class="text-sm font-semibold text-gray-600">25+ yrs</p>    
+        </div>
 
     <!-- Doctor Card 2 -->
     <div class="min-w-[100px] text-center">
         <img src="http://stethbook.com/wp-content/uploads/2025/10/DrSnehaGoudKuna-dp.png"
-             class="w-20 h-20 object-cover rounded-full mx-auto shadow-md border-2 border-white" />
+             onclick="openDoctorSheet(
+'Dr. Ramesh',
+'15 yrs',
+'Specialist in general dentistry with a gentle patient approach.',
+this.src)"
+     class="cursor-pointer w-20 h-20 object-cover rounded-full mx-auto shadow-md border-2 border-white" />
         <p class="text-sm font-medium mt-2">Dr. Ramesh</p>
         <p class="text-xs text-gray-500">15 yrs</p>
     </div>
@@ -434,6 +451,29 @@
                 gtag("event", "contact_download", { doctor: "DrSnehaGoudKuna" });
             }
         </script>
+        
+
+<script>
+function openDoctorSheet(name, exp, desc, img) {
+    document.getElementById("doctorSheet").classList.remove("hidden");
+
+    document.querySelector("#doctorSheet h2").innerText = name;
+    document.getElementById("sheetExpTop").innerText = exp;
+    document.querySelector("#doctorSheet #bioText").innerText = desc;
+    document.querySelector("#doctorSheet img").src = img;
+}
+
+function closeDoctorSheet() {
+    document.getElementById("doctorSheet").classList.add("hidden");
+}
+
+// Close when clicking outside
+document.getElementById("doctorSheet").addEventListener("click", function(e) {
+    if (e.target.id === "doctorSheet") {
+        closeDoctorSheet();
+    }
+});
+</script>
         <!-- ✅ Rating Popup Script with GA4 Events -->
         <script>
             (function () {
@@ -519,7 +559,69 @@ el.classList.remove("text-gray-500", "border-transparent");
 
 }
 </script>
+<!-- DOCTOR BOTTOM SHEET -->
+<div id="doctorSheet" class="fixed inset-0 bg-black bg-opacity-40 z-50 hidden flex items-end justify-center">
 
+    <!-- Sheet -->
+    <div class="w-full max-w-md bg-white rounded-t-3xl p-5 animate-slideUp max-h-[85vh] overflow-y-auto">
+
+        <!-- Close Button -->
+        <div class="flex justify-end">
+            <button onclick="closeDoctorSheet()" class="text-gray-500 text-xl font-bold">X</button>
+        </div>
+        <div class="flex items-center space-x-4">
+                        <div class="relative">
+                            <img id="sheetImage" src="http://stethbook.com/wp-content/uploads/2025/10/DrSnehaGoudKuna-dp.png" alt="Dr. Sneha Goud Kuna" class="w-32 aspect-square object-cover rounded-full border-4 border-white shadow-xl" />
+                        </div>
+                        <div>
+                            <div id="availabilityStatus" class="text-xs px-2 py-1 rounded-full font-semibold inline-block mb-1"></div>
+                            <h2 class="text-xl font-semibold">Dr. Sneha Goud Kuna</h2>
+                            <p id="sheetDegree" class="text-sm text-gray-500">BDS</p>
+                            <p class="text-sm text-purple-700 font-medium bg-purple-50 px-2 py-0.5 rounded-md inline-block w-fit">Dental Surgeon</p>
+                            <p class="text-sm text-purple-700 font-medium bg-purple-50 px-2 py-0.5 rounded-md inline-block w-fit">Dental Surgeon</p>
+                            <p class="text-sm text-purple-700 font-medium bg-purple-50 px-2 py-0.5 rounded-md inline-block w-fit">Dental Surgeon</p>
+                        </div>
+                    </div>
+                    <!-- Badges Section -->
+                    <br />
+                    <div class="grid grid-cols-2 text-center mt-6">
+                        <!-- Experience Badge -->
+                        <div class="flex flex-col items-center">
+                            <div class="w-8 h-8 flex items-center justify-center rounded-full bg-purple-200 text-purple-700 text-2xl shadow-sm">
+                                <img src="https://img.icons8.com/?size=30&id=65218&format=png&color=000000" alt="Experience" />
+                            </div>
+                            <span class="mt-2 text-sm font-medium text-gray-800 max-w-[80px] break-words"> <b text-gray-800>25+</b> Years of Experience </span>
+                        </div>
+                        <!-- Google Rating Badge with blue 'Rating' link -->
+                        <div class="flex flex-col items-center">
+                            <img src="https://img.icons8.com/?size=100&id=V5cGWnc9R4xj&format=png&color=000000" alt="Google Rating" class="w-8 h-8 object-contain" />
+                            <span class="mt-2 text-sm font-medium text-gray-800 max-w-[100px] text-center break-words">
+                                <a href="https://maps.app.goo.gl/oLhNLpFvjVhZ48V8A" target="_blank" class="text-sm font-medium text-gray-800 no-underline"> 500+ consultations</a>
+                            </span>
+                        </div>
+        
+                    </div>
+                    <!-- Bio & Experience with More/Less -->
+                    <div class="mt-4 text-sm text-gray-600">
+                        <div id="bioText" class="transition-all duration-300">Dr. Sneha Goud Kuna is a compassionate and highly regarded dentist at Happy Dental Hospital, </div>
+                        <button id="toggleMore" onclick="toggleBio()" class="text-blue-600 hover:underline text-xs mt-1 hidden">More</button>
+                    </div>
+                    <!-- Consult CTA -->
+                    <a
+                        href="https://wa.me/919032361903"
+                        target="_blank"
+                        class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white text-center font-medium py-2 px-4 rounded-lg w-full transition"
+                        onclick="gtag('event', 'consult_click', { doctor: 'DrSnehaGoudKuna' });"
+                    >
+                        Consult Now
+                    </a>
+
+        
+
+
+
+    </div>
+</div>
 
 
     </body>
